@@ -1,31 +1,110 @@
-body {
+.heading {
+    background-image:url("https://source.unsplash.com/random/?recipe");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    div{
+    height: 90vh;
     display: flex;
-    flex-direction:column;
+    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    align-content: center;
-      .container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: 100%;
-        width: 90%;
-        margin: auto;
-        text-align: center;
-        z-index: 1;
+}
+    .icone {
+        width: 150px;
+    }
+}
+.gallerie{
+    background-color: $color-accent;
+    ul {
+        display: grid;
+        row-gap: 58px;
+        margin-left: 103px;
+        padding-bottom: 88px;
+        li {
+            a{
+                text-decoration: none;
+                display: flex;
+                
+                p{
+                    font: $second-title-regular;
+                    text-transform:uppercase;
+                    color: $color-base;
+                    width: 568px;
+                    transition: 250ms;
+                    animation: all 250ms linear;
+                }
+                img{
+                    transition: 250ms;
+                    animation: all 250ms ease-in;
+                    display: none;
+
+                    
+                }
+                &:hover {
+                    img{
+                        display: block;
+                        position: absolute;
+                        margin-left: 500px;
+                        z-index: 1;
+                        transition: 500ms;
+                        animation: opacity 500ms ease-in;
+                    }
+                    p{
+                        letter-spacing: 1px;
+                        width: 592px;
+                        transition: 250ms;
+                        z-index: 2;
+                    }
+                }
+            }
+        }
+    }
+}
+.information_spoonacular {
+    margin-bottom: 82px;
+    h2{
+        padding-top: 72px;
+        padding-bottom: 60px;
+    }
+    p{
+        margin-left: 103px;
+        width: 936px;
+    }
+}
+h1 {
+    font: $title-extra-large;
+    text-transform:uppercase;
+    color:$color-accent;
+}
+h2 {
+    font:$third-extra-large;
+    text-transform:uppercase;
+    color: $color-blackbase;
+}
+sub {
+    font:$sub-extra-large;
+    text-transform:uppercase;
+    color:$color-accent;
+}
+
+p {
+    font: $body-regular;
+    color: $color-blackbase;
+}
+.tag {
+    padding-top: 36px;
+    padding-bottom: 64px;
+    font: $tag-regular;
+    color: $color-base;
+}
+
+@keyframes opacity {
+    0%{
         opacity: 0;
-        transition: opacity 0.25s ease-in;
-        &.is-ready {
-          opacity: 1;
-        }
-        .image {
-          text-align: center;
-          img{
-          width: 100%;
-          max-width: 500px;
-          height: 500px;
-        }
-        }
-      }
-  }
-  
+    }
+    100%{
+        opacity: 1;
+    }
+}
