@@ -5,7 +5,8 @@ config = {
     entry: './src/js/index.js',
     output: {
         filename: 'main.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: '',
     },
     mode: 'development',
     module: {
@@ -13,9 +14,9 @@ config = {
                 test: /\.html/,
                 loader: 'html-loader',
             },
-            { 
-                test: /\.hbs$/, 
-                loader: "handlebars-loader", 
+            {
+                test: /\.hbs$/,
+                loader: "handlebars-loader",
             }, {
                 test: /\.scss$/,
                 use: ['style-loader', 'css-loader', {
@@ -60,7 +61,11 @@ config = {
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/index.html',
-            filename: 'index.html'
+            filename: 'index.html',
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/individual.html",
+            filename: "individual.html",
         }),
         new ESLintPlugin({
             context: path.resolve(__dirname, 'src'),
