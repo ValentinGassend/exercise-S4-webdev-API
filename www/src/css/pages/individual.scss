@@ -1,0 +1,273 @@
+
+.indiv-header {
+ padding-top: 36px;
+ padding-bottom: 18px;
+ a{
+ color: $color-blackbase;
+}
+}
+.recip_header {
+    display: flex;
+    justify-content: space-between;
+.indiv-leftside{
+    h1 {
+        font: $indiv-title-regular;
+        position: relative;
+        top: -36px;
+        width: 520px;
+        left: 416px;
+    }
+    sub {
+        position: relative;
+        top: -96px;
+        font: $sub-extra-regular;
+        color: $color-blackbase;
+    }
+}
+
+.indiv-rightside {
+    h2{
+        font: $indiv-second-title-large;
+        color: $color-side;
+        max-width: 298px;
+    }
+    ul{
+        margin-top: 30px;
+        text-align: end;
+        color: $color-side;
+        li{
+            padding-bottom: 18px;
+            font: $indiv-list-large;
+        }
+    }
+}
+}
+.stuff {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    margin-bottom: 56px;
+    h3 {
+        font: $indiv-third-extra-large;
+    }
+    .ingredients, .equipement {
+        .all-elements{
+            text-align:center;
+            display: flex;
+            flex-wrap: wrap;
+            img {
+                max-height: 82px;
+                max-width: 96px;
+            }
+            .individual {
+                padding-right: 24px;
+                .name {
+                    max-width: fit-content;
+                    font: $indiv-element-regular;
+                }
+                .quantity {
+                    font: $indiv-element-regular;
+                }
+            }
+        }
+    }
+}
+.more-info {
+    margin-bottom: 79px;
+    h2{
+        color: $color-accent;
+        font: $indiv-second-title-regular;
+        padding-bottom: 12px;
+    }
+    .split {
+        display: flex;
+    justify-content: space-between;
+        .indiv-leftside{
+            p{
+                max-width: 832px;
+                font: $body-regular;
+                a{
+                    color: $color-blackbase;
+                    text-decoration: none;
+                    cursor: text;
+                }
+            }
+        }
+
+        .indiv-rightside {
+            h2{
+                font: $indiv-second-title-large;
+                color: $color-side;
+                max-width: 298px;
+                padding-bottom: 12px;
+            }
+            ul{
+                margin-top: 30px;
+                text-align: end;
+                color: $color-side;
+                li{
+                    text-transform: capitalize;
+                    padding-bottom: 18px;
+                    font: $indiv-list-large;
+                }
+            }
+        }
+    }  
+}
+.steps-sec {
+    margin-bottom: 168px;
+    h2{
+        color: $color-accent;
+        font: $indiv-second-title-regular;
+        padding-bottom: 40px;
+    }
+    .all-steps {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .step {
+            padding-bottom: 40px;
+            &:nth-child(odd) {        
+                align-self: flex-start;
+                max-width: 860px;
+            }
+            &:nth-child(even) {        
+                align-self: flex-end;
+                text-align: end;
+                max-width: 860px;
+                .elements {
+                    justify-content: flex-end;
+                    .single-element{
+                        align-items: center;
+                    }
+                }
+            }
+            .instruction{
+                font: $body-regular;   
+                padding-bottom: 12px;
+            }
+            .elements{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 16px;
+                .single-element{
+                text-align:center;
+                display: flex;
+                max-width: 96px;
+                flex-direction: column;
+                gap: 12px;
+                align-items: center;
+                img {
+                    height: 32px;
+                    max-width: 48px;
+                }
+                p {
+                    font-size: 18px;
+                    margin: 0 auto;
+                }
+            }
+            }
+        }
+    }
+    .resume {
+        margin: 0 auto;
+        padding-top: 104px;
+        text-align: center;
+        width: 800px;
+    }
+}
+.sec-wine {
+    padding-top: 36px;
+    background-color: $color-accent;
+    
+    .wine {
+        padding-bottom: 96px;
+        h2{
+            font: $indiv-second-title-regular;
+            color: $color-base;
+            padding-bottom: 42px;
+        }
+        p{
+            color: $color-base;
+            text-align: center;
+            line-height: 130%;
+        }
+    }
+    .similar_recipe {
+        h2{
+            color: $color-base;
+            font: $indiv-second-title-regular;
+            padding-bottom: 42px;
+        }
+        .all_recipes_similar {
+            display: flex;
+            flex-direction: column;
+            gap: 64px;
+            div {
+                a{
+                    text-decoration: none;
+                    display: flex;
+                    div{
+                        overflow: hidden;
+                        img {
+                            transition: 250ms;
+                            animation: all 500ms ease-in;
+                            max-width: 592px;
+                            height: 100%;
+                        }
+                    }
+                    h2 {
+                        font: $indiv-title-regular;
+                        letter-spacing: 1.5px;
+                        color: $color-base;
+                        position: relative;
+                        max-width: 666px;
+                        left: -42px;
+                        top: -24px;
+                        height: fit-content;
+                        line-height: 100%;
+                        transition: 250ms;
+                        animation: all 250ms ease-in;
+                        
+                    }
+                    &:hover {
+                        div{
+                            img{
+                                transform: scale(1.1);
+                            }
+                        }
+                        h2 {
+                            line-height: 125%;
+                        }
+                    }
+                }
+                p {
+                    font: $sub-extra-regular;
+                    color: $color-base;
+                    padding: 0 24px;
+                }
+                &:nth-child(odd) {    
+                     a{
+                        flex-direction: row-reverse;
+                        h2{
+                            left: 42px;
+                            text-align: end;
+                        }
+                     }
+                    p{
+                        text-align: end;
+                    }
+                }
+            }
+        }
+    }
+    .button {
+        display: flex;
+        text-align: center;
+        a {
+            color: $color-base;
+            margin: 0 auto;
+            padding:64px 0;
+        } 
+    }
+}
