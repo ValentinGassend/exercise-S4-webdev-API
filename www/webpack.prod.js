@@ -16,14 +16,18 @@ config = {
     module: {
         rules: [
             /*
-						* Test des fichiers HTML
-					  * html-loader : dit à Webpack comment interpreter le code HTML,
-					  * et ajoute des tags (<script> ou <link rel="stylesheet">) dans chaque fichier HTML généré
-					  * vers les fichiers JavaScript et CSS de l'application
-						*/
+             * Test des fichiers HTML
+             * html-loader : dit à Webpack comment interpreter le code HTML,
+             * et ajoute des tags (<script> ou <link rel="stylesheet">) dans chaque fichier HTML généré
+             * vers les fichiers JavaScript et CSS de l'application
+             */
             {
                 test: /\.html/,
-                loader: 'html-loader'
+                loader: 'html-loader',
+            },
+            {
+                test: /\.hbs$/,
+                loader: "handlebars-loader",
             },
             /*
              * Test des fichiers JavaScript
@@ -35,30 +39,34 @@ config = {
                 loader: 'babel-loader',
             },
             /*
-						 * Test des fichiers .scss
-						 * MiniCssExtractPlugin.loader : extrait le code CSS importé dans les fichiers JavaScript
-						 * css-loader : dit à Webpack comment interpreter le code CSS
-						 * postcss-loader : ajout des plugins CSS (paramétrés dans postcss.config.js)
-						 * sass-loader : transforme le code SCSS en CSS
-						 */
+             * Test des fichiers .scss
+             * MiniCssExtractPlugin.loader : extrait le code CSS importé dans les fichiers JavaScript
+             * css-loader : dit à Webpack comment interpreter le code CSS
+             * postcss-loader : ajout des plugins CSS (paramétrés dans postcss.config.js)
+             * sass-loader : transforme le code SCSS en CSS
+             */
             {
                 test: /\.scss$/,
                 use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
             },
             /*
-						 * Test des images et polices
-						 * Utilisation du module Webpack "Assets module" afin de générer ces fichiers en tant que ressource
-						 * + paramétrage du nom et du chemin des fichiers de sortie
-						 */
+             * Test des images et polices
+             * Utilisation du module Webpack "Assets module" afin de générer ces fichiers en tant que ressource
+             * + paramétrage du nom et du chemin des fichiers de sortie
+             */
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
-                generator: { filename: 'images/[name][ext]' }
+                generator: {
+                    filename: 'images/[name][ext]'
+                }
             },
             {
                 test: /\.(woff(2)?|ttf|eot|svg)$/,
                 type: 'asset/resource',
-                generator: { filename: 'fonts/[name][ext]' }
+                generator: {
+                    filename: 'fonts/[name][ext]'
+                }
             },
 
         ]
@@ -67,12 +75,17 @@ config = {
         // Génère un document HTML à partir du template indiqué
         new HtmlWebpackPlugin({
             template: './src/index.html',
-            filename: 'index.html'
+            filename: 'index.html',
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/individual.html",
+            filename: "individual.html",
         }),
         // Options de sortie de la feuille de style générée
         new MiniCssExtractPlugin({
             filename: `style.css`
-        })
+        }),
+
     ],
 };
 
