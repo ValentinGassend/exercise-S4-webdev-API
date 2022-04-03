@@ -1,0 +1,35 @@
+/* Font */
+$color-base: #ffffff; // Blanc 
+$color-blackbase: #000000; // Noir
+$color-accent: #00843C; // vert
+$color-side: #A3A3A3; // Gris
+
+
+/* Font */
+$font-family: 'Josefin Slab', serif;
+$font-family-secondary: 'Lora', serif;
+$font-family-third: 'Indie Flower', cursive;
+
+
+
+
+/* Text */
+
+$title-extra-large: normal normal 600 96px/100% $font-family;
+$sub-extra-large: normal normal 600 64px/100% $font-family;
+$third-extra-large: normal normal 600 48px/100% $font-family;
+
+$second-title-regular: normal normal 400 48px/100% $font-family-secondary;
+$body-regular:normal normal 400 24px/100% $font-family-secondary;
+
+$tag-regular:normal normal 400 18px/100% $font-family-third;
+
+/* indiv part */
+$indiv-button : normal normal 500 18/100% $font-family;
+$indiv-title-regular : normal normal 400 48px/100% $font-family-secondary;
+$indiv-second-title-large : normal normal 500 24px/100% $font-family;
+$indiv-second-title-regular : normal normal 400 48px/100% $font-family-secondary;
+$indiv-third-extra-large: normal normal 500 24px/100% $font-family;
+$sub-extra-regular : normal normal 400 24px/100% $font-family-third;
+$indiv-list-large:normal normal 500 18px/100% $font-family;
+$indiv-element-regular:normal normal 500 18px/100% $font-family;
