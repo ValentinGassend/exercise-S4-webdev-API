@@ -7,7 +7,7 @@ Site utilisant l'API Spoonacular, exercice réalisé lors du S4 info.
 Cloner le repo
 
 ```bash
-git clone https://github.com/ValentinGassend/exercice-S4-webdev-wordpress/
+git clone github.com/ValentinGassend/exercise-S4-webdev-API/
 ```
 
 Installer les dépendances
