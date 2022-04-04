@@ -1,6 +1,6 @@
-# exercise-S4-webdev
+# exercise-S4-webdev-API
 
-Site Wordpress exposant les agents de Valorant, exercice réalisé lors du S4 info.
+Site utilisant l'API Spoonacular, exercice réalisé lors du S4 info.
 
 ## ⬇️ Installation du projet
 
